@@ -1,0 +1,155 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Registration</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel='stylesheet' type='text/css'>	
+
+  <style>
+
+/* CONTACT */
+
+.contact-form
+{
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=password]
+{
+    border: 0;
+    border-bottom: 2px solid;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin: 30px 0;
+    height: 28px;
+    font-size: 17px;
+    font-family:  'Lato', sans-serif;
+    font-weight: 700;
+    width: 100%;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.contact-form input[type=text]:hover
+{
+    color: #849974;
+    border-color: #849974;
+ 
+} 
+
+.contact-form input[type=email]:hover
+{
+    color: #849974;
+    border-color: #849974;
+} 
+
+.contact-form input[type=password]:hover
+{
+    color: #849974;
+    border-color: #849974;
+} 
+
+.contact-form input[type=submit]
+{	
+    display: inline-block;
+    border: 2px solid;
+    text-align: center;
+    padding: 30px 0px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    font-family:  'Lato', sans-serif;
+    font-weight: 700;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 17px;
+    transition: color .2s linear, border-color .2s linear;
+}
+.contact-form input[type=submit]:hover
+{
+    color: #f271ab;
+    border-color: #f271ab;
+}
+
+.contact-form input[type=text]::-webkit-input-placeholder, 
+.contact-form input[type=email]::-webkit-input-placeholder, 
+.contact-form input[type=password]::-webkit-input-placeholder, 
+{
+    font-family:  'Lato', sans-serif;
+    color: #2f2f2f;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 25px;
+}
+.contact-form input[type=text]::-moz-placeholder, 
+.contact-form input[type=email]::-moz-placeholder, 
+.contact-form textarea::-moz-placeholder , 
+.contact-form input[type=password]::-moz-placeholder
+{
+    font-family:  'Lato', sans-serif;
+    color: #2f2f2f;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 25px;
+    opacity: 1;
+}
+.contact-form input[type=text]:-ms-input-placeholder, 
+.contact-form input[type=email]:-ms-input-placeholder, 
+.contact-form input[type=password]:-ms-input-placeholder
+{
+    font-family:  'Lato', sans-serif;
+    color: #2f2f2f;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 25px;
+}
+.contact-form input[type=text]:-moz-placeholder, 
+.contact-form input[type=email]:-moz-placeholder, 
+.contact-form input[type=password]:-moz-placeholder
+{
+    font-family:  'Lato', sans-serif;
+    color: #2f2f2f;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 25px;
+    opacity: 1;
+}
+
+/* END CONTACT */
+
+</style>
+</head>
+
+
+
+<body>
+
+<div class="contact-form">  
+<form action ="register" method="post">
+{% csrf_token %}  
+  <p><input id="firstname" type="text" name="first_name" placeholder="First Name"></p>
+  <p><input id="lastname" type="text" name="last_name" placeholder="Last Name"></p>
+  <p><input id="username" type="text" name="username" placeholder="Username"></p>
+  <p><input id="contact-email" type="email" name="email" placeholder="Email"></p>
+  <p><input id="pass1" type="password" name="password1" placeholder="Password"></p>
+  <p><input id="pass2" type="password" name="password1" placeholder="Password Again?"></p>
+  <p><input type="submit" ></p>       
+
+</form>
+                          
+</div>  
+    
+
+
+
+</body>
+
+</html>
