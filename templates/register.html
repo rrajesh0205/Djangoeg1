@@ -86,7 +86,7 @@ form {
 	 padding: 20px;
 	 font-size: 1.2rem;
 }
- body {
+ body{
 	 background: #333;
 	 font-family: 'PT Sans', sans-serif;
 	 padding: 20px;
@@ -95,6 +95,18 @@ form {
 	 box-sizing: border-box;
 }
  
+p
+ {
+	 display: block;
+	 width: 100%;
+	 margin: 20px 0;
+	 background: #41d873;
+	 color: white;
+	 border: 0;
+	 padding: 20px;
+     font-family: 'PT Sans', sans-serif;
+	 font-size: 1.2rem;
+}
 </style>
 </head>
 
@@ -124,10 +136,7 @@ form {
     <input type="email" id="email" name="email" required placeholder=" " />
     <label for="email">Email Address</label>
     <div class="requirements">
-      Must be a valid email address.{% for message in messages %}
-        {{ message }}
-        
-    {% endfor %}
+      Must be a valid email address.
     </div>
   </div>
   
@@ -148,6 +157,11 @@ form {
   </div>
   
   <input type="submit" value="Sign Up"/>
+  <p>
+  {% for message in messages %}
+        {{ message }}
+        
+    {% endfor %}</p>
 
 </form>
 
